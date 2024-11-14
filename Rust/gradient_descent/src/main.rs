@@ -199,13 +199,13 @@ fn main() -> Result<(), Box<dyn Error>>{
 
     println!("{:?} {}\n\n" ,w, b);
 
-    predict(mean_vec, std_vec, &w, &b);
+    predict_cli(mean_vec, std_vec, &w, &b);
 
     Ok(())
 }
 
 
-fn predict(mean_vec: DVector<f64>, std_vec: DVector<f64>, w: &DVector<f64> , b: &f64) {
+fn predict_cli(mean_vec: DVector<f64>, std_vec: DVector<f64>, w: &DVector<f64> , b: &f64) {
 
     let mut x = DMatrix::<f64>::zeros(3, 1);
     let vec = ["the age ", "the weight", "the HorsepPower"];
